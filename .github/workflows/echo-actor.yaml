@@ -1,0 +1,12 @@
+name: echo actor schedule
+
+on:
+  schedule:
+    - cron: "0/2 * * * *"
+
+jobs:
+  echo-actor:
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: "echo actor"
+        run: echo $GITHUB_ACTOR
